@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
+import { HashLink } from "react-router-hash-link";
 
 const NavbarCustom = () => {
   const { user, logOut } = useAuth();
@@ -18,17 +19,17 @@ const NavbarCustom = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/home">
+              <Nav.Link as={HashLink} to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/services">
+              <Nav.Link as={HashLink} to="/services">
                 Services
               </Nav.Link>
               <NavDropdown title="More" id="navbarScrollingDropdown">
-                <NavDropdown.Item as={Link} to="#action3">
+                <NavDropdown.Item as={HashLink} to="#action3">
                   More
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/about">
+                <NavDropdown.Item as={HashLink} to="/about">
                   About Us
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -37,7 +38,7 @@ const NavbarCustom = () => {
                     Log Out
                   </NavDropdown.Item>
                 ) : (
-                  <NavDropdown.Item as={Link} to="/login">
+                  <NavDropdown.Item as={HashLink} to="/login">
                     Login
                   </NavDropdown.Item>
                 )}
