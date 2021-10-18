@@ -1,6 +1,6 @@
 import React from 'react';
 import { FloatingLabel, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './SignUp.css';
 import google from '../../images/logo/google-logo.png';
@@ -9,15 +9,25 @@ import yahoo from '../../images/logo/yahoo-logo.png';
 import github from '../../images/logo/github-logo.png';
 
 const SignUp = () => {
-  const { emailSignUp, error, user, googleSignIn } = useAuth();
+  const { emailSignUp, error,  googleSignIn, setIsLoading } = useAuth();
   const onHandleSignUp = (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
     emailSignUp(email, password);
+  };
+
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_url = location.state?.from || '/home';
+  console.log(redirect_url);
+  const onHandleGoogleSignIn = () => {
+    googleSignIn()
+      .then(result => {
+        history.push(redirect_url);
+    }).finally(() => setIsLoading(false))
   }
-  console.log(user);
 
     return (
       <div className="w-50 mx-auto my-5">
@@ -52,7 +62,7 @@ const SignUp = () => {
             height="35"
             src={google}
             alt=""
-            onClick={googleSignIn}
+            onClick={onHandleGoogleSignIn}
           />
           <img
             className="additional-link"

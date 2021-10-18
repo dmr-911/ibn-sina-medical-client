@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
 import { FloatingLabel, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import google from "../../images/logo/google-logo.png";
 import facebook from "../../images/logo/facebook-logo.png";
@@ -15,6 +15,17 @@ const Login = () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     emailLogin(email, password);
+  }
+
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_url = location.state?.from || '/home';
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then(result => {
+      history.push(redirect_url)
+    })
   }
 
     return (
@@ -57,7 +68,7 @@ const Login = () => {
             height="35"
             src={google}
             alt=""
-            onClick={googleSignIn}
+            onClick={handleGoogleSignIn}
           />
           <img
             className="additional-link"

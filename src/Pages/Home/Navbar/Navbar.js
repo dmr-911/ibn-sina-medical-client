@@ -5,7 +5,6 @@ import useAuth from '../../../hooks/useAuth';
 
 const NavbarCustom = () => {
   const { user, logOut } = useAuth();
-  console.log(user);
     return (
       <Navbar bg="light" expand="lg">
         <Container fluid>
