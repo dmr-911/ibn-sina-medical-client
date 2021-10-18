@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "picture": "https://i.ibb.co/Bt207tJ/doctor-4.jpg",
+    "name": "GENERAL COMPANION CARE"
+
+  },
+  {
+    "id": "2",
+    "picture": "https://i.ibb.co/bF0n5Dc/doctor-3.jpg",
+    "name": "PERSONAL CARE SERVICES-ADLs SUCH AS BATHING"
+
+  },
+  {
+    "id": "3",
+    "picture": "https://i.ibb.co/ZNNm33W/doctor-1.jpg",
+    "name": "SKILLED NURSING - PEG TUBE FEEDING, WOUND CARE, PT/OT, IV THERAPY, MEDICATION ADMINISTRATION, ILEOSTOMY, TRACHEOSTOMY CARE, ONCOLOGY CARE and much more!"
+  },
+  {
+    "id": "4",
+    "picture": "https://i.ibb.co/Xyp2T1K/doctor-2.jpg",
+    "name": "STROKE CARE"
+
+  },
+  {
+    "id": "5",
+    "picture": "https://i.ibb.co/0QkrrY9/doctor-8.jpg",
+    "name": "DEMENTIA CARE"
+
+  },
+  {
+    "id": "6",
+    "picture": "https://i.ibb.co/sscLyj5/doctor-9.jpg",
+    "name": "HOME HEALTHCARE AFTER COVID"
+
+  },
+  {
+    "id": "7",
+    "picture": "https://i.ibb.co/8MPMKWV/doctor-7.jpg",
+    "name": "SPECIALTY CARE-Home healthcare before hospice, home care at the end of life, home care after surgery."
+  },
+  {
+    "id": "8",
+    "picture": "https://i.ibb.co/yPKyWNY/doctor-6.jpg",
+    "name": "Wellness Check Program from our Director of Nursing"
+
+  },
+  {
+    "id": "9",
+    "picture": "https://i.ibb.co/rGd2TZz/doctor-5.jpg",
+    "name": "Fitness Advice"
+
+  },
+  {
+    "id": "0",
+    "picture": "https://i.ibb.co/QKzfxvk/doctor-11.jpg",
+    "name": "Comfort support"
+
+  },
+  {
+    "id": "10",
+    "picture": "https://i.ibb.co/tYjsy0M/doctor-12.jpg",
+    "name": "RESPITE CARE"
+
+  },
+  {
+    "id": "11",
+    "picture": "https://i.ibb.co/m85B6vD/doctor-10.jpg",
+    "name": "Healthy tips & Advice"
+
+  }
+]

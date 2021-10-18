@@ -21,7 +21,7 @@ const Slider = () => {
           <img className="d-block w-100" src={img2} alt="Second slide" />
 
           <Carousel.Caption>
-            <div>
+            <div className="d-flex justify-content-center align-items-center">
               {medical}
               <div>
                 <h2>Appointment</h2>
