@@ -1,55 +1,50 @@
 import React from 'react';
-import './Login.css';
-import { FloatingLabel, Form } from 'react-bootstrap';
+import { FloatingLabel, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import google from "../../images/logo/google-logo.png";
-import facebook from "../../images/logo/facebook-logo.png";
-import yahoo from "../../images/logo/yahoo-logo.png";
-import github from "../../images/logo/github-logo.png";
+import './SignUp.css';
+import google from '../../images/logo/google-logo.png';
+import facebook from '../../images/logo/facebook-logo.png';
+import yahoo from '../../images/logo/yahoo-logo.png';
+import github from '../../images/logo/github-logo.png';
 
-const Login = () => {
-  const { emailLogin, error, googleSignIn } = useAuth();
-  const onHandleSubmit = (e) => {
+const SignUp = () => {
+  const { emailSignUp, error, user, googleSignIn } = useAuth();
+  const onHandleSignUp = (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    emailLogin(email, password);
+
+    emailSignUp(email, password);
   }
+  console.log(user);
 
     return (
       <div className="w-50 mx-auto my-5">
-        <h2>Please Login</h2>
-        <Form onSubmit={onHandleSubmit}>
+        <h2>Singn Up</h2>
+        <Form onSubmit={onHandleSignUp}>
           <FloatingLabel
             controlId="floatingInput"
             label="Email address"
             className="mb-3 login-input"
           >
-            <Form.Control
-              id="email"
-              type="email"
-              placeholder="name@example.com"
-            />
+            <Form.Control type="email" placeholder="name@example.com" />
           </FloatingLabel>
           <FloatingLabel
             controlId="floatingPassword"
             label="Password"
             className="mb-3 login-input"
           >
-            <Form.Control
-              id="password"
-              type="password"
-              placeholder="Password"
-            />
+            <Form.Control type="password" placeholder="Password" />
           </FloatingLabel>
           {error.slice(22, -2)}
           <br />
-          <input variant="primary" type="submit" value="Login"></input>{" "}
+          <Button variant="primary">Sign Up</Button>{" "}
         </Form>
         <p className="my-3">
-          New to our site? <Link to="/signup">Signup here</Link>{" "}
+          Already a member? <Link to="/login">Login</Link>{" "}
         </p>
+
         <div className="mt-5">
           <img
             className="additional-link"
@@ -73,7 +68,7 @@ const Login = () => {
             height="35"
             src={yahoo}
             alt=""
-            //   onClick={handleYahooSignin}
+          //   onClick={handleYahooSignin}
           />
           <img
             className="additional-link"
@@ -88,4 +83,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;

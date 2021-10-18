@@ -1,13 +1,16 @@
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import useAuth from '../../../hooks/useAuth';
 
 const NavbarCustom = () => {
+  const { user, logOut } = useAuth();
+  console.log(user);
     return (
       <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand as={Link} to="#">
-              IBN Sina Medical College and Hospital 
+            IBN Sina Medical College and Hospital
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -16,17 +19,29 @@ const NavbarCustom = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/home">Home</Nav.Link>
-              <Nav.Link as={Link} to="/services">Services</Nav.Link>
+              <Nav.Link as={Link} to="/home">
+                Home
+              </Nav.Link>
+              <Nav.Link as={Link} to="/services">
+                Services
+              </Nav.Link>
               <NavDropdown title="More" id="navbarScrollingDropdown">
-                <NavDropdown.Item as={Link} to="#action3">More</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="#action3">
+                  More
+                </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/about">
-                    About Us
+                  About Us
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/login">
-                  Login
-                </NavDropdown.Item>
+                {user.displayName ? (
+                  <NavDropdown.Item onClick={logOut}>
+                    Log Out
+                  </NavDropdown.Item>
+                ) : (
+                  <NavDropdown.Item as={Link} to="/login">
+                    Login
+                  </NavDropdown.Item>
+                )}
               </NavDropdown>
             </Nav>
             <Form className="d-flex">
@@ -37,6 +52,7 @@ const NavbarCustom = () => {
                 aria-label="Search"
               />
             </Form>
+            {user.displayName && <i>{user.displayName.toUpperCase()}</i>}
           </Navbar.Collapse>
         </Container>
       </Navbar>
