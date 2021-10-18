@@ -13,6 +13,7 @@ import ServiceDetails from './Pages/DynamicRoute/ServiceDetails/ServiceDetails';
 import SignUp from './Pages/SignUp/SignUp';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from '../src/Pages/PrivateRoute/PrivateRoute';
+import DoctorDetails from './Pages/Home/DoctorDetails/DoctorDetails';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/doctor/:doctorId">
+              <DoctorDetails></DoctorDetails>
             </Route>
             <Route path="/services">
               <Services></Services>

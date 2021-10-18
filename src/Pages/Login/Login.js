@@ -9,7 +9,7 @@ import yahoo from "../../images/logo/yahoo-logo.png";
 import github from "../../images/logo/github-logo.png";
 
 const Login = () => {
-  const { emailLogin, error, googleSignIn } = useAuth();
+  const { emailLogin, error, googleSignIn, facebookSignIn, githubSignIn, yahooSignIn } = useAuth();
   const onHandleSubmit = (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value;
@@ -23,6 +23,24 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     googleSignIn()
+      .then(result => {
+      history.push(redirect_url)
+    })
+  }
+  const handleFacebookSignIn = () => {
+    facebookSignIn()
+      .then(result => {
+      history.push(redirect_url)
+    })
+  }
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then(result => {
+      history.push(redirect_url)
+    })
+  }
+  const handleYahooSignIn = () => {
+    yahooSignIn()
       .then(result => {
       history.push(redirect_url)
     })
@@ -76,7 +94,7 @@ const Login = () => {
             height="50"
             src={facebook}
             alt=""
-            // onClick={handleFacebookSignin}
+            onClick= {handleFacebookSignIn}
           />
           <img
             className="additional-link"
@@ -84,7 +102,7 @@ const Login = () => {
             height="35"
             src={yahoo}
             alt=""
-            //   onClick={handleYahooSignin}
+              onClick={handleYahooSignIn}
           />
           <img
             className="additional-link"
@@ -92,7 +110,7 @@ const Login = () => {
             height="50"
             src={github}
             alt=""
-            // onClick={handleGithubSignin}
+            onClick={handleGithubSignIn}
           />
         </div>
       </div>

@@ -1,10 +1,24 @@
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 const ServiceDetails = () => {
     const { serviceId } = useParams();
+        const [services, setService] = useState({});
+        useEffect(() => {
+          fetch("/services.json")
+            .then((res) => res.json())
+            .then((data) => setService(data));
+        }, []);
+    let service;
+    if (services.length) {
+         service = services?.find(service => service.id === serviceId);
+        }
+    
     return (
         <div>
-            <h2>Details for service no. {serviceId}</h2>
+            {service && <div>
+                <h2>{service.name}</h2>
+            </div>}
         </div>
     );
 };
