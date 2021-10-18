@@ -56,7 +56,7 @@ const useFirebase = () => {
     return signInWithPopup(auth, githubProvider);
   }
   const yahooSignIn = () => {
-    return signInWithPopup(auth, githubProvider);
+    return signInWithPopup(auth, yahooProvider);
   }
 
   useEffect(() => {
