@@ -23,8 +23,12 @@ const DoctorDetails = () => {
       <div>
         {doctors.length && (
           <div>
+            <h3 className="mt-3">
+              Your appoinment with <span className="color-orrange">Dr. {doctor.name}</span> is processing!
+              Keep Patience, Thank You.
+            </h3>
             <Card
-              className="mx-auto my-5 border border-1 border-primary"
+              className="mx-auto mb-5 mt-2 border border-1 border-primary"
               style={{
                 width: "18rem",
                 backgroundColor: "#394650",

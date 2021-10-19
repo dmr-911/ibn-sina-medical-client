@@ -4,13 +4,17 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 import { HashLink } from "react-router-hash-link";
 import './Navbar.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+
+const login = <FontAwesomeIcon icon={faSignInAlt} />;
 
 const NavbarCustom = () => {
   const { user, logOut } = useAuth();
     return (
-      <Navbar className="custom-nav-bg" expand="lg">
+      <Navbar className="custom-nav-bg sticky-top" expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to="/home" className="text-info fw-bold fs-3">
+          <Navbar.Brand as={Link} to="/home" className="text-info fs-3">
             IBN-Sina Hospital
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -72,8 +76,8 @@ const NavbarCustom = () => {
                 </button>
               </>
             ) : (
-              <Nav.Link as={HashLink} to="/login" className="text-white">
-                <b>Login</b>
+              <Nav.Link as={HashLink} to="/login" className="text-white" >
+                  <p>{login} <i>Login</i></p>
               </Nav.Link>
             )}
           </Navbar.Collapse>
