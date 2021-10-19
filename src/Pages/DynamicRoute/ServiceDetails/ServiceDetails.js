@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     
         const history = useHistory();
         const onHandleBack = () => {
-          history.go(-1);
+          history.push('/home');
         };
     
     return (
@@ -32,7 +32,7 @@ const ServiceDetails = () => {
               <Card.Title>{service.name}</Card.Title>
               <Card.Text>{service.details}</Card.Text>
               <Button variant="primary" onClick={onHandleBack}>
-                Go Back
+                Go Home
               </Button>
             </Card.Body>
           </Card>

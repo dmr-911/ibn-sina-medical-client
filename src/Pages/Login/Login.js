@@ -24,27 +24,31 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then(result => {
-      history.push(redirect_url)
-    })
-  }
+        history.push(redirect_url)
+      })
+  };
+
   const handleFacebookSignIn = () => {
     facebookSignIn()
       .then(result => {
-      history.push(redirect_url)
-    })
-  }
+        history.push(redirect_url)
+      })
+  };
+
   const handleGithubSignIn = () => {
     githubSignIn()
       .then(result => {
-      history.push(redirect_url)
-    })
-  }
+        history.push(redirect_url)
+      })
+  };
+
+
   const handleYahooSignIn = () => {
     yahooSignIn()
       .then(result => {
-      history.push(redirect_url)
-    })
-  }
+        history.push(redirect_url)
+      })
+  };
 
     return (
       <div className="w-50 mx-auto my-5">

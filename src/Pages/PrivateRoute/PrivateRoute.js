@@ -7,12 +7,13 @@ import {
 import useAuth from '../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = useAuth();
+  const { user, isLoading } = useAuth();
 
     if (isLoading) {
        return <Spinner animation="border" />;
-   }
-    return (
+  }
+    else {
+          return (
       <Route
         {...rest}
         render={({ location }) =>
@@ -29,6 +30,8 @@ const PrivateRoute = ({ children, ...rest }) => {
         }
       />
     );
+  }
+
 };
 
 export default PrivateRoute;
