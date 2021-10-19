@@ -1,5 +1,4 @@
 import React from 'react';
-import { FloatingLabel, Form, Button } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './SignUp.css';
@@ -9,21 +8,32 @@ import yahoo from '../../images/logo/yahoo-logo.png';
 import github from '../../images/logo/github-logo.png';
 
 const SignUp = () => {
-  const { emailSignUp, error,  googleSignIn, setIsLoading } = useAuth();
-  const onHandleSignUp = (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    emailSignUp(email, password);
-  };
+  const { googleSignIn, setIsLoading, facebookSignIn, githubSignIn, yahooSignIn } = useAuth();
 
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || '/home';
   console.log(redirect_url);
-  const onHandleGoogleSignIn = () => {
+  const handleGoogleSignIn = () => {
     googleSignIn()
+      .then(result => {
+        history.push(redirect_url);
+    }).finally(() => setIsLoading(false))
+  }
+  const handleFacebookSignIn = () => {
+    facebookSignIn()
+      .then(result => {
+        history.push(redirect_url);
+    }).finally(() => setIsLoading(false))
+  }
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then(result => {
+        history.push(redirect_url);
+    }).finally(() => setIsLoading(false))
+  }
+  const handleYahooSignIn = () => {
+    yahooSignIn()
       .then(result => {
         history.push(redirect_url);
     }).finally(() => setIsLoading(false))
@@ -32,29 +42,6 @@ const SignUp = () => {
     return (
       <div className="w-50 mx-auto my-5">
         <h2>Singn Up</h2>
-        <Form onSubmit={onHandleSignUp}>
-          <FloatingLabel
-            controlId="floatingInput"
-            label="Email address"
-            className="mb-3 login-input"
-          >
-            <Form.Control type="email" placeholder="name@example.com" />
-          </FloatingLabel>
-          <FloatingLabel
-            controlId="floatingPassword"
-            label="Password"
-            className="mb-3 login-input"
-          >
-            <Form.Control type="password" placeholder="Password" />
-          </FloatingLabel>
-          {error.slice(22, -2)}
-          <br />
-          <Button variant="primary">Sign Up</Button>{" "}
-        </Form>
-        <p className="my-3">
-          Already a member? <Link to="/login">Login</Link>{" "}
-        </p>
-
         <div className="mt-5">
           <img
             className="additional-link"
@@ -62,7 +49,7 @@ const SignUp = () => {
             height="35"
             src={google}
             alt=""
-            onClick={onHandleGoogleSignIn}
+            onClick={handleGoogleSignIn}
           />
           <img
             className="additional-link"
@@ -70,7 +57,7 @@ const SignUp = () => {
             height="50"
             src={facebook}
             alt=""
-            // onClick={handleFacebookSignin}
+            onClick={handleFacebookSignIn}
           />
           <img
             className="additional-link"
@@ -78,7 +65,7 @@ const SignUp = () => {
             height="35"
             src={yahoo}
             alt=""
-          //   onClick={handleYahooSignin}
+              onClick={handleYahooSignIn}
           />
           <img
             className="additional-link"
@@ -86,9 +73,12 @@ const SignUp = () => {
             height="50"
             src={github}
             alt=""
-            // onClick={handleGithubSignin}
+            onClick={handleGithubSignIn}
           />
         </div>
+        <p className="my-3">
+          Already a member? <Link to="/login">Login</Link>{" "}
+        </p>
       </div>
     );
 };

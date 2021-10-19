@@ -7,7 +7,7 @@ const Doctor = ({doctor}) => {
     const { picture, name, email, phone, id } = doctor;
     return (
       <Col>
-        <Card>
+        <Card className="border border-1 border-primary">
           <Card.Img variant="top" src={picture} height="300px" />
           <Card.Body>
             <Card.Title>Name : {name}</Card.Title>

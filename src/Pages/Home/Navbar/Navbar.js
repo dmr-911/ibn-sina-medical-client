@@ -1,58 +1,53 @@
 import React from 'react';
-import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 import { HashLink } from "react-router-hash-link";
+import './Navbar.css';
 
 const NavbarCustom = () => {
   const { user, logOut } = useAuth();
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar className="custom-nav-bg" expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to="#">
+          <Navbar.Brand as={Link} to="/home" className="text-white fs-3">
             IBN Sina Medical College and Hospital
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="ms-auto my-2 my-lg-0"
+              className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={HashLink} to="/home">
+              <Nav.Link as={NavLink} to="/home" className="text-white" activeStyle={{color: 'red'}}>
                 Home
               </Nav.Link>
-              <Nav.Link as={HashLink} to="/services">
+              <Nav.Link as={NavLink} to="/doctors" className="text-white" activeStyle={{color: 'red'}}>
+                Doctors
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/services" className="text-white" activeStyle={{color: 'red'}}>
                 Services
               </Nav.Link>
-              <NavDropdown title="More" id="navbarScrollingDropdown">
-                <NavDropdown.Item as={HashLink} to="#action3">
-                  More
-                </NavDropdown.Item>
-                <NavDropdown.Item as={HashLink} to="/about">
-                  About Us
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                {user.displayName ? (
-                  <NavDropdown.Item onClick={logOut}>
-                    Log Out
-                  </NavDropdown.Item>
-                ) : (
-                  <NavDropdown.Item as={HashLink} to="/login">
-                    Login
-                  </NavDropdown.Item>
-                )}
-              </NavDropdown>
+              <Nav.Link as={NavLink} to="/about" className="text-white" activeStyle={{color: 'red'}}>
+                About Us
+              </Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-            </Form>
-            {user.displayName && <i>{user.displayName.toUpperCase()}</i>}
+            {user.displayName ? (
+              <>
+                <i>{user.displayName.toUpperCase()}</i>{" "}
+                <button
+                  className="btn-logout btn-danger rounded"
+                  onClick={logOut}
+                >
+                  LogOut
+                </button>
+              </>
+            ) : (
+              <Nav.Link as={HashLink} to="/login" className="text-white">
+                Login
+              </Nav.Link>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

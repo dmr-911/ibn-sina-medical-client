@@ -14,6 +14,7 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from '../src/Pages/PrivateRoute/PrivateRoute';
 import DoctorDetails from './Pages/Home/DoctorDetails/DoctorDetails';
 import Footer from './Pages/Common/Footer/Footer/Footer';
+import Doctors from './Pages/Home/Doctors/Doctors';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/doctors">
+              <Doctors></Doctors>
             </Route>
             <Route path="/doctor/:doctorId">
               <DoctorDetails></DoctorDetails>

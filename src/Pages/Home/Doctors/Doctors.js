@@ -7,11 +7,17 @@ import './Doctors.css';
 const Doctors = () => {
     const { doctors } = useDoctorsList();
     return (
-        <Container id="doctors">
-            <h2 className="my-5">Doctors List</h2>
+      <Container id="doctors"  style={{ backgroundColor: "#394650" }} className="px-4 py-3 my-2 rounded">
+        <h2 className="mt-2 mb-2">
+          <span className="text-white">Doctors</span>
+          <span className="color-orrange"> List</span>
+        </h2>
+        <div className="line mx-auto mb-3"></div>
         <Row xs={1} md={2} className="g-4">
           {doctors.length &&
-            doctors.slice(0, 6).map((doctor) => <Doctor key={doctor.id} doctor={doctor}></Doctor>)}
+            doctors.map((doctor) => (
+              <Doctor key={doctor.id} doctor={doctor}></Doctor>
+            ))}
         </Row>
       </Container>
     );

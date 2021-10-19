@@ -11,7 +11,7 @@ const Appointment = () => {
                 <input type="text" placeholder="name"/>
                 <input type="email" name="email" id="email" placeholder="email"/>
                 <textarea name="message" id="message"></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit" className="appointment-btn">Submit</button>
             </form>
         </div>
     );

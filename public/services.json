@@ -1,67 +1,79 @@
 [
   {
     "id": "1",
-    "picture": "https://i.ibb.co/Bt207tJ/doctor-4.jpg",
-    "name": "GENERAL COMPANION CARE"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2XPi69Zi4MAnbmHwY14S5GQ8TQhvewRV4g&usqp=CAU",
+    "name": "GENERAL COMPANION CARE",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
 
   },
   {
     "id": "2",
-    "picture": "https://i.ibb.co/bF0n5Dc/doctor-3.jpg",
-    "name": "PERSONAL CARE SERVICES-ADLs SUCH AS BATHING"
+    "picture": "https://nomadflag.com/wp-content/uploads/2018/05/medical-services-and-hospitals-in-argentina.jpg",
+    "name": "PERSONAL CARE SERVICES-ADLs SUCH AS BATHING",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
 
   },
   {
     "id": "3",
-    "picture": "https://i.ibb.co/ZNNm33W/doctor-1.jpg",
-    "name": "SKILLED NURSING - PEG TUBE FEEDING, WOUND CARE, PT/OT, IV THERAPY, MEDICATION ADMINISTRATION, ILEOSTOMY, TRACHEOSTOMY CARE, ONCOLOGY CARE and much more!"
+    "picture": "https://cdn.vanguardngr.com/wp-content/uploads/2019/11/Health.png",
+    "name": "SKILLED NURSING - PEG TUBE FEEDING, WOUND CARE, PT/OT, IV THERAPY, MEDICATION ADMINISTRATION, ILEOSTOMY, TRACHEOSTOMY CARE, ONCOLOGY CARE and much more!",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   },
   {
     "id": "4",
-    "picture": "https://i.ibb.co/Xyp2T1K/doctor-2.jpg",
-    "name": "STROKE CARE"
+    "picture": "https://media-eng.dhakatribune.com/uploads/2017/11/WEB_Doctors-at-home_Bigstock_Edited_26.11.2017.jpg",
+    "name": "STROKE CARE",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
 
   },
   {
     "id": "5",
-    "picture": "https://i.ibb.co/0QkrrY9/doctor-8.jpg",
-    "name": "DEMENTIA CARE"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlgE_rlnoy-s6JNFlYuAysUVI0IqZRr4Yw-w&usqp=CAU",
+    "name": "DEMENTIA CARE",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
 
   },
   {
     "id": "6",
-    "picture": "https://i.ibb.co/sscLyj5/doctor-9.jpg",
-    "name": "HOME HEALTHCARE AFTER COVID"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96eCtaBdFDNNtbHPbq4g-RBi7xsIYxhBF3g&usqp=CAU",
+    "name": "HOME HEALTHCARE AFTER COVID",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
 
   },
   {
     "id": "7",
-    "picture": "https://i.ibb.co/8MPMKWV/doctor-7.jpg",
-    "name": "SPECIALTY CARE-Home healthcare before hospice, home care at the end of life, home care after surgery."
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3qUxH8Vr-h47mjfOUPT1ZOzur-a1Wkwi1RA&usqp=CAU",
+    "name": "SPECIALTY CARE-Home healthcare before hospice, home care at the end of life, home care after surgery.",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   },
   {
     "id": "8",
-    "picture": "https://i.ibb.co/yPKyWNY/doctor-6.jpg",
-    "name": "Wellness Check Program from our Director of Nursing"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNiQdoZ0HNA-VU6YxxSst2q78gulifmPhjaw&usqp=CAU",
+    "name": "Wellness Check Program from our Director of Nursing",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   },
   {
     "id": "9",
-    "picture": "https://i.ibb.co/rGd2TZz/doctor-5.jpg",
-    "name": "Fitness Advice"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuVAeiPDeZYt6L_aJNq3yFUcsONd1GF9roA&usqp=CAU",
+    "name": "Fitness Advice",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   },
   {
     "id": "0",
-    "picture": "https://i.ibb.co/QKzfxvk/doctor-11.jpg",
-    "name": "Comfort support"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRchUjgKPW4U29m0eZzEHArws9VJvvgTcbVjg&usqp=CAU",
+    "name": "Comfort support",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   },
   {
     "id": "10",
-    "picture": "https://i.ibb.co/tYjsy0M/doctor-12.jpg",
-    "name": "RESPITE CARE"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfMXVJ2QK1DnByWSeBADIu_wVOQhIlcamXw&usqp=CAU",
+    "name": "RESPITE CARE",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   },
   {
     "id": "11",
-    "picture": "https://i.ibb.co/m85B6vD/doctor-10.jpg",
-    "name": "Healthy tips & Advice"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWYB_9JBYeG6R1F4hVKuY3DqnmxUgXog_WOg&usqp=CAU",
+    "name": "Healthy tips & Advice",
+    "details": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
   }
 ]

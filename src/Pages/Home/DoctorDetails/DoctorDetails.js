@@ -23,16 +23,25 @@ const DoctorDetails = () => {
       <div>
         {doctors.length && (
           <div>
-            <Card className="mx-auto my-5" style={{ width: "18rem" }}>
+            <Card
+              className="mx-auto my-5 border border-1 border-primary"
+              style={{
+                width: "18rem",
+                backgroundColor: "#394650",
+                color: "white",
+              }}
+            >
               <Card.Img variant="top" src={doctor.picture} />
               <Card.Body>
                 <Card.Title>{doctor.name}</Card.Title>
                 <Card.Text>
-                                Email : {doctor.email}
-                                <br />
-                                Phone : {doctor.phone}
+                  Email : {doctor.email}
+                  <br />
+                  Phone : {doctor.phone}
                 </Card.Text>
-                <Button variant="primary" onClick={onHandleBack}>Go Back</Button>
+                <Button variant="primary" onClick={onHandleBack}>
+                  Go Back
+                </Button>
               </Card.Body>
             </Card>
           </div>
