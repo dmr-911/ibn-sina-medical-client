@@ -8,7 +8,7 @@ import './About.css';
 const About = () => {
   const [about, setAbout] = useState({});
   useEffect(() => {
-    fetch("./about.JSON")
+    fetch("./about.json")
       .then((res) => res.json())
       .then((data) => setAbout(data));
   }, []);
