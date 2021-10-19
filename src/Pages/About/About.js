@@ -14,7 +14,7 @@ const About = () => {
   }, []);
 
   return (
-    <Container
+    <Container id="about"
       style={{ backgroundColor: "#394650" }}
       className="px-4 py-3 my-2 rounded"
     >

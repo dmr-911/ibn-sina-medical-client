@@ -12,6 +12,7 @@ const Stuffs = () => {
     console.log(stuffs);
     return (
       <Container
+        id="stuffs"
         style={{ backgroundColor: "#394650" }}
         className="px-4 py-3 my-2 rounded"
       >

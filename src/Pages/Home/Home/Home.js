@@ -10,7 +10,7 @@ const Home = () => {
   const { services } = useServicesList();
   const { doctors } = useDoctorsList();
     return (
-      <div style={{ backgroundColor: "#394650" }} className="pb-5">
+      <div id="home" style={{ backgroundColor: "#394650" }} className="pb-5">
         <Slider></Slider>
         <Container id="doctors">
           <h2 className="mt-5 mb-2">
@@ -27,7 +27,7 @@ const Home = () => {
                 ))}
           </Row>
         </Container>
-        <Container>
+        <Container id="home-services">
           <h2 className="mt-5 mb-2">
             <span className="text-white">Our </span>
             <span className="color-orrange">Services</span>
