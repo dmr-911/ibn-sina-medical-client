@@ -93,6 +93,7 @@ const useFirebase = () => {
           })
           .catch((err) => {
             setError(err.message);
+            alert(err.message);
           });
       };
       const getName = (e) => {

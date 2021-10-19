@@ -25,7 +25,6 @@ const SignUp = () => {
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || '/home';
-  console.log(redirect_url);
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then(result => {

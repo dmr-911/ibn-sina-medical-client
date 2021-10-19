@@ -65,10 +65,10 @@ const NavbarCustom = () => {
                 About Us
               </Nav.Link>
             </Nav>
-            {user.email ? (
+            {user.displayName ? (
               <>
                 <span>
-                  <i>{user.displayName.toUpperCase()}</i> 
+                  <i>{user?.displayName?.toUpperCase() || user?.email}</i> 
                 </span>
                 <button
                   className="btn-logout btn-danger rounded"
