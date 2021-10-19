@@ -13,6 +13,7 @@ const About = () => {
       .then((data) => setAbout(data));
   }, []);
 
+
   return (
     <Container id="about"
       style={{ backgroundColor: "#394650" }}

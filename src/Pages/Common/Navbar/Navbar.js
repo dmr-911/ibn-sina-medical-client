@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
+import './Navbar.css';
 
 const NavbarCustom = () => {
   const style = {
@@ -20,7 +21,7 @@ const NavbarCustom = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={NavLink} to="/home" activeStyle={style}>
+              <Nav.Link as={NavLink} to="/home" className="navbar-link" activeStyle={style}>
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} to="/services" activeStyle={style}>

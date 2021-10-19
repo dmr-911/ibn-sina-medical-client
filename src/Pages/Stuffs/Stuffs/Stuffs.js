@@ -9,7 +9,7 @@ const Stuffs = () => {
             .then(res => res.json())
             .then(data => setStuffs(data));
     }, [])
-    console.log(stuffs);
+  
     return (
       <Container
         id="stuffs"

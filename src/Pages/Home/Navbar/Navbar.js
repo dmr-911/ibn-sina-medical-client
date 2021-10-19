@@ -10,7 +10,7 @@ const NavbarCustom = () => {
     return (
       <Navbar className="custom-nav-bg" expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to="/home" className="text-white fs-3">
+          <Navbar.Brand as={Link} to="/home" className="text-info fw-bold fs-3">
             IBN-Sina Hospital
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
