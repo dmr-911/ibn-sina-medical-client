@@ -6,9 +6,21 @@ import google from '../../images/logo/google-logo.png';
 import facebook from '../../images/logo/facebook-logo.png';
 import yahoo from '../../images/logo/yahoo-logo.png';
 import github from '../../images/logo/github-logo.png';
+import { Col, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
 
 const SignUp = () => {
-  const { googleSignIn, setIsLoading, facebookSignIn, githubSignIn, yahooSignIn } = useAuth();
+  const {
+    googleSignIn,
+    setIsLoading,
+    facebookSignIn,
+    githubSignIn,
+    yahooSignIn,
+    getName,
+    getPhoto,
+    signup,
+    getEmail,
+    getPassword
+  } = useAuth();
 
   const location = useLocation();
   const history = useHistory();
@@ -42,6 +54,79 @@ const SignUp = () => {
     return (
       <div className="w-50 mx-auto my-5">
         <h2>Singn Up</h2>
+        <Form onSubmit={signup}>
+          <Row>
+            <Col className="text-start">
+              <Form.Label htmlFor="email" visuallyHidden>
+                Your Name
+              </Form.Label>
+              <InputGroup className="mb-2">
+                <FormControl
+                  required
+                  type="text"
+                  placeholder="Enter your name"
+                  onBlur={getName}
+                  id="name"
+                  autoComplete="current-name"
+                />
+              </InputGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="text-start">
+              <Form.Label htmlFor="email" visuallyHidden>
+                Your Email Address
+              </Form.Label>
+              <InputGroup className="mb-2">
+                <FormControl
+                  required
+                  type="email"
+                  placeholder="Enter email"
+                  onBlur={getEmail}
+                  id="email"
+                  autoComplete="current-email"
+                />
+              </InputGroup>
+            </Col>
+          </Row>
+
+          <Row className="mt-2">
+            <Col className="text-start">
+              <Form.Label htmlFor="email" visuallyHidden>
+                Your Password
+              </Form.Label>
+              <InputGroup className="mb-2">
+                <FormControl
+                  type="password"
+                  placeholder="Enter Password"
+                  onBlur={getPassword}
+                  id="password"
+                  autoComplete="current-password"
+                />
+              </InputGroup>
+            </Col>
+          </Row>
+          <Row className="mt-2">
+            <Col className="text-start">
+              <Form.Label htmlFor="name" visuallyHidden>
+                Your Profile Photo Url
+              </Form.Label>
+              <InputGroup className="mb-2">
+                <FormControl
+                  type="text"
+                  placeholder="Enter valid photo url"
+                  onBlur={getPhoto}
+                  id="photo"
+                  autoComplete="current-text"
+                />
+              </InputGroup>
+            </Col>
+          </Row>
+
+          <button type="submit" className="btn btn-primary mt-2 w-100">
+            Sign Up
+          </button>
+        </Form>
         <div className="mt-5">
           <img
             className="additional-link"
@@ -65,7 +150,7 @@ const SignUp = () => {
             height="35"
             src={yahoo}
             alt=""
-              onClick={handleYahooSignIn}
+            onClick={handleYahooSignIn}
           />
           <img
             className="additional-link"

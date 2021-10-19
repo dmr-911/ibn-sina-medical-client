@@ -16,7 +16,7 @@ const DoctorDetails = () => {
     };
     const history = useHistory();
     const onHandleBack = () => {
-        history.go(-1);
+        history.push('/home');
     }
 
     return (
@@ -44,7 +44,7 @@ const DoctorDetails = () => {
                   Phone : {doctor.phone}
                 </Card.Text>
                 <Button variant="primary" onClick={onHandleBack}>
-                  Go Back
+                  Go Home
                 </Button>
               </Card.Body>
             </Card>

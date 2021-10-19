@@ -9,17 +9,20 @@ import yahoo from "../../images/logo/yahoo-logo.png";
 import github from "../../images/logo/github-logo.png";
 
 const Login = () => {
-  const { emailLogin, error, googleSignIn, facebookSignIn, githubSignIn, yahooSignIn } = useAuth();
-  const onHandleSubmit = (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    emailLogin(email, password);
-  }
+  const {
+    error,
+    googleSignIn,
+    facebookSignIn,
+    githubSignIn,
+    yahooSignIn,
+    signInWithEmail,
+    getEmail,
+    getPassword
+  } = useAuth();
 
   const location = useLocation();
   const history = useHistory();
-  const redirect_url = location.state?.from || '/home';
+  const redirect_url = location?.state?.from || '/';
 
   const handleGoogleSignIn = () => {
     googleSignIn()
@@ -53,7 +56,15 @@ const Login = () => {
     return (
       <div className="w-50 mx-auto my-5">
         <h2>Please Login</h2>
-        <Form onSubmit={onHandleSubmit}>
+        <Form
+          onSubmit={(e) => {
+            e.preventDefault();
+            signInWithEmail()
+              .then((result) => {
+                history.push(redirect_url);
+              })
+          }}
+        >
           <FloatingLabel
             controlId="floatingInput"
             label="Email address"
@@ -62,6 +73,7 @@ const Login = () => {
             <Form.Control
               id="email"
               type="email"
+              onBlur={getEmail}
               placeholder="name@example.com"
             />
           </FloatingLabel>
@@ -73,6 +85,7 @@ const Login = () => {
             <Form.Control
               id="password"
               type="password"
+              onBlur={getPassword}
               placeholder="Password"
             />
           </FloatingLabel>
@@ -98,7 +111,7 @@ const Login = () => {
             height="50"
             src={facebook}
             alt=""
-            onClick= {handleFacebookSignIn}
+            onClick={handleFacebookSignIn}
           />
           <img
             className="additional-link"
@@ -106,7 +119,7 @@ const Login = () => {
             height="35"
             src={yahoo}
             alt=""
-              onClick={handleYahooSignIn}
+            onClick={handleYahooSignIn}
           />
           <img
             className="additional-link"
