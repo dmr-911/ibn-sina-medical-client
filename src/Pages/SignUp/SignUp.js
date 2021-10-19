@@ -12,9 +12,9 @@ const SignUp = () => {
   const {
     googleSignIn,
     setIsLoading,
-    facebookSignIn,
-    githubSignIn,
-    yahooSignIn,
+    // facebookSignIn,
+    // githubSignIn,
+    // yahooSignIn,
     getName,
     getPhoto,
     signup,
@@ -32,24 +32,24 @@ const SignUp = () => {
         history.push(redirect_url);
     }).finally(() => setIsLoading(false))
   }
-  const handleFacebookSignIn = () => {
-    facebookSignIn()
-      .then(result => {
-        history.push(redirect_url);
-    }).finally(() => setIsLoading(false))
-  }
-  const handleGithubSignIn = () => {
-    githubSignIn()
-      .then(result => {
-        history.push(redirect_url);
-    }).finally(() => setIsLoading(false))
-  }
-  const handleYahooSignIn = () => {
-    yahooSignIn()
-      .then(result => {
-        history.push(redirect_url);
-    }).finally(() => setIsLoading(false))
-  }
+  // const handleFacebookSignIn = () => {
+  //   facebookSignIn()
+  //     .then(result => {
+  //       history.push(redirect_url);
+  //   }).finally(() => setIsLoading(false))
+  // }
+  // const handleGithubSignIn = () => {
+  //   githubSignIn()
+  //     .then(result => {
+  //       history.push(redirect_url);
+  //   }).finally(() => setIsLoading(false))
+  // }
+  // const handleYahooSignIn = () => {
+  //   yahooSignIn()
+  //     .then(result => {
+  //       history.push(redirect_url);
+  //   }).finally(() => setIsLoading(false))
+  // }
 
     return (
       <div className="w-50 mx-auto my-5">
@@ -149,7 +149,7 @@ const SignUp = () => {
             height="50"
             src={facebook}
             alt=""
-            onClick={handleFacebookSignIn}
+            // onClick={handleFacebookSignIn}
           />
           <img
             className="additional-link"
@@ -157,7 +157,7 @@ const SignUp = () => {
             height="35"
             src={yahoo}
             alt=""
-            onClick={handleYahooSignIn}
+            // onClick={handleYahooSignIn}
           />
           <img
             className="additional-link"
@@ -165,7 +165,7 @@ const SignUp = () => {
             height="50"
             src={github}
             alt=""
-            onClick={handleGithubSignIn}
+            // onClick={handleGithubSignIn}
           />
         </div>
         <p className="my-3">

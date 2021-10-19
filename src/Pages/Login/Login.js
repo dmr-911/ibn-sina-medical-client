@@ -12,9 +12,9 @@ const Login = () => {
   const {
     error,
     googleSignIn,
-    facebookSignIn,
-    githubSignIn,
-    yahooSignIn,
+    // facebookSignIn,
+    // githubSignIn,
+    // yahooSignIn,
     signInWithEmail,
     getEmail,
     getPassword
@@ -31,27 +31,27 @@ const Login = () => {
       })
   };
 
-  const handleFacebookSignIn = () => {
-    facebookSignIn()
-      .then(result => {
-        history.push(redirect_url)
-      })
-  };
+  // const handleFacebookSignIn = () => {
+  //   facebookSignIn()
+  //     .then(result => {
+  //       history.push(redirect_url)
+  //     })
+  // };
 
-  const handleGithubSignIn = () => {
-    githubSignIn()
-      .then(result => {
-        history.push(redirect_url)
-      })
-  };
+  // const handleGithubSignIn = () => {
+  //   githubSignIn()
+  //     .then(result => {
+  //       history.push(redirect_url)
+  //     })
+  // };
 
 
-  const handleYahooSignIn = () => {
-    yahooSignIn()
-      .then(result => {
-        history.push(redirect_url)
-      })
-  };
+  // const handleYahooSignIn = () => {
+  //   yahooSignIn()
+  //     .then(result => {
+  //       history.push(redirect_url)
+  //     })
+  // };
 
     return (
       <div className="w-50 mx-auto my-5">
@@ -116,7 +116,7 @@ const Login = () => {
             height="50"
             src={facebook}
             alt=""
-            onClick={handleFacebookSignIn}
+            // onClick={handleFacebookSignIn}
           />
           <img
             className="additional-link"
@@ -124,7 +124,7 @@ const Login = () => {
             height="35"
             src={yahoo}
             alt=""
-            onClick={handleYahooSignIn}
+            // onClick={handleYahooSignIn}
           />
           <img
             className="additional-link"
@@ -132,7 +132,7 @@ const Login = () => {
             height="50"
             src={github}
             alt=""
-            onClick={handleGithubSignIn}
+            // onClick={handleGithubSignIn}
           />
         </div>
       </div>
