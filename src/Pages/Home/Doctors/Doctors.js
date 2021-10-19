@@ -7,7 +7,7 @@ import './Doctors.css';
 const Doctors = () => {
     const { doctors } = useDoctorsList();
     return (
-        <Container>
+        <Container id="doctors">
             <h2 className="my-5">Doctors List</h2>
         <Row xs={1} md={2} className="g-4">
           {doctors.length &&

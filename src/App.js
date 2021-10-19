@@ -7,13 +7,13 @@ import About from './Pages/About/About';
 import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import NavbarCustom from './Pages/Home/Navbar/Navbar';
-import Footer from './Pages/Common/Footer/Footer';
 import Services from './Pages/Common/Services/Services';
 import ServiceDetails from './Pages/DynamicRoute/ServiceDetails/ServiceDetails';
 import SignUp from './Pages/SignUp/SignUp';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from '../src/Pages/PrivateRoute/PrivateRoute';
 import DoctorDetails from './Pages/Home/DoctorDetails/DoctorDetails';
+import Footer from './Pages/Common/Footer/Footer/Footer';
 
 function App() {
   return (
