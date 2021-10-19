@@ -67,7 +67,9 @@ const NavbarCustom = () => {
             </Nav>
             {user.displayName ? (
               <>
-                <i>{user.displayName.toUpperCase()}</i>{" "}
+                <span>
+                  <i>{user.displayName.toUpperCase()}</i> 
+                </span>
                 <button
                   className="btn-logout btn-danger rounded"
                   onClick={logOut}
@@ -76,8 +78,10 @@ const NavbarCustom = () => {
                 </button>
               </>
             ) : (
-              <Nav.Link as={HashLink} to="/login" className="text-white" >
-                  <p>{login} <i>Login</i></p>
+              <Nav.Link as={HashLink} to="/login" className="text-white">
+                <p>
+                  {login} <i>Login</i>
+                </p>
               </Nav.Link>
             )}
           </Navbar.Collapse>
