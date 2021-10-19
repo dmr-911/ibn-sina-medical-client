@@ -65,7 +65,7 @@ const NavbarCustom = () => {
                 About Us
               </Nav.Link>
             </Nav>
-            {user.displayName ? (
+            {user.email ? (
               <>
                 <span>
                   <i>{user?.displayName?.toUpperCase() || user?.email}</i> 
