@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Image, Row } from "react-bootstrap";
+import './AboutItem.css';
 
 const AboutItem = (props) => {
   const { picture, name, info } = props.item;

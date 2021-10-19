@@ -38,6 +38,14 @@ const NavbarCustom = () => {
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
+                to="/stuffs"
+                className="text-white"
+                activeStyle={{ color: "red" }}
+              >
+                Stuffs
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
                 to="/services"
                 className="text-white"
                 activeStyle={{ color: "red" }}
@@ -65,7 +73,7 @@ const NavbarCustom = () => {
               </>
             ) : (
               <Nav.Link as={HashLink} to="/login" className="text-white">
-                Login
+                <b>Login</b>
               </Nav.Link>
             )}
           </Navbar.Collapse>

@@ -15,6 +15,7 @@ import PrivateRoute from '../src/Pages/PrivateRoute/PrivateRoute';
 import DoctorDetails from './Pages/Home/DoctorDetails/DoctorDetails';
 import Footer from './Pages/Common/Footer/Footer/Footer';
 import Doctors from './Pages/Home/Doctors/Doctors';
+import Stuffs from './Pages/Stuffs/Stuffs/Stuffs';
 
 function App() {
   return (
@@ -32,8 +33,11 @@ function App() {
             <Route path="/doctors">
               <Doctors></Doctors>
             </Route>
-            <Route path="/doctor/:doctorId">
+            <PrivateRoute path="/doctor/:doctorId">
               <DoctorDetails></DoctorDetails>
+            </PrivateRoute>
+            <Route path="/stuffs">
+              <Stuffs></Stuffs>
             </Route>
             <Route path="/services">
               <Services></Services>

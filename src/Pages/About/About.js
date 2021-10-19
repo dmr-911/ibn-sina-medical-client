@@ -6,7 +6,7 @@ import AboutItem from '../AboutItem/AboutItem';
 import './About.css';
 
 const About = () => {
-  const [about, setAbout] = useState([]);
+  const [about, setAbout] = useState({});
   useEffect(() => {
     fetch("./about.JSON")
       .then((res) => res.json())
@@ -14,14 +14,18 @@ const About = () => {
   }, []);
 
   return (
-    <Container>
+    <Container
+      style={{ backgroundColor: "#394650" }}
+      className="px-4 py-3 my-2 rounded"
+    >
       <h2 className="mt-3 mb-2 fw-bold">
-        <span className="color-dark">About</span>{" "}
+        <span className="text-white">About</span>{" "}
         <span className="color-orrange">Hospital</span>
       </h2>
+      <div className="line mx-auto mb-3"></div>
       <div className="break-line mx-auto mb-3"></div>
       {about.length ? (
-        <Row xs={1} md={2} lg={3} className="g-0 mb-5">
+        <Row xs={1} md={2} lg={3} className="g-3 mb-5">
           {about.map((item) => (
             <AboutItem key={item.id} item={item}></AboutItem>
           ))}
