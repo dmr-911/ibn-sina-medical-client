@@ -128,14 +128,21 @@ const SignUp = () => {
           </button>
         </Form>
         <div className="mt-5">
-          <img
-            className="additional-link"
-            title="Google"
-            height="35"
-            src={google}
-            alt=""
+          <div
+            className="mb-3 border border-2 border-primary d-inline-block p-2 rounded"
             onClick={handleGoogleSignIn}
-          />
+            style={{ cursor: "pointer" }}
+          >
+            <img
+              className="additional-link"
+              title="Google"
+              height="35"
+              src={google}
+              alt=""
+            />
+            <span>Google SignIn</span>
+          </div>
+          <br />
           <img
             className="additional-link"
             title="Facebook"

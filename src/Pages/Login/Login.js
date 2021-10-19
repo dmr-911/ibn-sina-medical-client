@@ -59,10 +59,9 @@ const Login = () => {
         <Form
           onSubmit={(e) => {
             e.preventDefault();
-            signInWithEmail()
-              .then((result) => {
-                history.push(redirect_url);
-              })
+            signInWithEmail().then((result) => {
+              history.push(redirect_url);
+            });
           }}
         >
           <FloatingLabel
@@ -97,14 +96,20 @@ const Login = () => {
           New to our site? <Link to="/signup">Signup here</Link>{" "}
         </p>
         <div className="mt-5">
-          <img
-            className="additional-link"
-            title="Google"
-            height="35"
-            src={google}
-            alt=""
+          <div
+            className="mb-3 border border-2 border-primary d-inline-block p-2 rounded"
             onClick={handleGoogleSignIn}
-          />
+            style={{cursor: 'pointer'}}
+          >
+             <img
+              className="additional-link"
+              title="Google"
+              height="35"
+              src={google}
+              alt=""
+            />
+            <span>Google SignIn</span>
+          </div><br />
           <img
             className="additional-link"
             title="Facebook"
