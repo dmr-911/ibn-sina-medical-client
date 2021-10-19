@@ -11,7 +11,7 @@ const NavbarCustom = () => {
       <Navbar className="custom-nav-bg" expand="lg">
         <Container fluid>
           <Navbar.Brand as={Link} to="/home" className="text-white fs-3">
-            IBN Sina Medical College and Hospital
+            IBN-Sina Hospital
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -20,16 +20,36 @@ const NavbarCustom = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={NavLink} to="/home" className="text-white" activeStyle={{color: 'red'}}>
+              <Nav.Link
+                as={NavLink}
+                to="/home"
+                className="text-white"
+                activeStyle={{ color: "red" }}
+              >
                 Home
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/doctors" className="text-white" activeStyle={{color: 'red'}}>
+              <Nav.Link
+                as={NavLink}
+                to="/doctors"
+                className="text-white"
+                activeStyle={{ color: "red" }}
+              >
                 Doctors
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/services" className="text-white" activeStyle={{color: 'red'}}>
+              <Nav.Link
+                as={NavLink}
+                to="/services"
+                className="text-white"
+                activeStyle={{ color: "red" }}
+              >
                 Services
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/about" className="text-white" activeStyle={{color: 'red'}}>
+              <Nav.Link
+                as={NavLink}
+                to="/about"
+                className="text-white"
+                activeStyle={{ color: "red" }}
+              >
                 About Us
               </Nav.Link>
             </Nav>

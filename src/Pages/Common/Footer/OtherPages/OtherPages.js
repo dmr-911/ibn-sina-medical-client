@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 
 const OtherPages = () => {
     return (
@@ -8,7 +8,7 @@ const OtherPages = () => {
         <h2>Make other pages</h2>
         <div className="line mb-3 mx-auto"></div>
         <Nav.Link
-          as={NavLink}
+          as={HashLink}
           to="/home"
           className="color-orrange"
           activeStyle={{ color: "white" }}
@@ -16,15 +16,23 @@ const OtherPages = () => {
           Home
         </Nav.Link>
         <Nav.Link
-          as={NavLink}
-          to="/services"
+          as={HashLink}
+          to="/home#doctors"
+          className="color-orrange"
+          activeStyle={{ color: "white" }}
+        >
+          Doctors
+        </Nav.Link>
+        <Nav.Link
+          as={HashLink}
+          to="/home#services"
           className="color-orrange"
           activeStyle={{ color: "white" }}
         >
           Services
         </Nav.Link>
         <Nav.Link
-          as={NavLink}
+          as={HashLink}
           className="color-orrange"
           to="/about"
           activeStyle={{ color: "white" }}

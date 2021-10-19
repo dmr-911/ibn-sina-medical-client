@@ -7,7 +7,7 @@ const Services = () => {
     const { services } = useServicesList();
 
     return (
-      <Container style={{ backgroundColor: "#394650" }} className="px-4 py-2 my-2 rounded">
+      <Container id="services" style={{ backgroundColor: "#394650" }} className="px-4 py-2 my-2 rounded">
         <h2 className="mt-3 mb-2">
           <span className="text-white">Doctors</span>
           <span className="color-orrange"> List</span>

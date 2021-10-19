@@ -33,7 +33,7 @@ const Home = () => {
             <span className="color-orrange">Services</span>
           </h2>
           <div className="line mx-auto mb-3"></div>
-          <Row md={3} className="g-3 my-5">
+          <Row xs={1} md={3} className="g-3 my-5">
             {services.length &&
               services
                 .slice(0, 6)

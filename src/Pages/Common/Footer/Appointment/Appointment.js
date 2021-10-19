@@ -10,7 +10,7 @@ const Appointment = () => {
             <form action="">
                 <input type="text" placeholder="name"/>
                 <input type="email" name="email" id="email" placeholder="email"/>
-                <textarea name="message" id="message"></textarea>
+                <textarea name="message" id="message" placeholder="Write your problem here"></textarea>
                 <button type="submit" className="appointment-btn">Submit</button>
             </form>
         </div>
