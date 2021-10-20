@@ -19,7 +19,8 @@ const SignUp = () => {
     getPhoto,
     signup,
     getEmail,
-    getPassword
+    getPassword,
+    message
   } = useAuth();
 
   const location = useLocation();
@@ -121,12 +122,15 @@ const SignUp = () => {
               </InputGroup>
             </Col>
           </Row>
-
+          {message && message}
           <button type="submit" className="btn btn-primary mt-2 w-100">
             Sign Up
           </button>
         </Form>
         <div className="mt-5">
+          <p className="my-3">
+            Already a member? <Link to="/login">Login</Link>{" "}
+          </p>
           <div
             className="mb-3 border border-2 border-primary d-inline-block p-2 rounded"
             onClick={handleGoogleSignIn}
@@ -167,9 +171,6 @@ const SignUp = () => {
             // onClick={handleGithubSignIn}
           />
         </div>
-        <p className="my-3">
-          Already a member? <Link to="/login">Login</Link>{" "}
-        </p>
       </div>
     );
 };

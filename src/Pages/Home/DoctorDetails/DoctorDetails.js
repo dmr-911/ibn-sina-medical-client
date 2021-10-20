@@ -30,7 +30,7 @@ const DoctorDetails = () => {
             <Card
               className="mx-auto mb-5 mt-2 border border-1 border-primary"
               style={{
-                width: "18rem",
+                width: "35rem",
                 backgroundColor: "#394650",
                 color: "white",
               }}

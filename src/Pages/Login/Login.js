@@ -10,7 +10,6 @@ import github from "../../images/logo/github-logo.png";
 
 const Login = () => {
   const {
-    error,
     googleSignIn,
     signInWithEmail,
     getEmail,
@@ -63,7 +62,6 @@ const Login = () => {
               placeholder="Password"
             />
           </FloatingLabel>
-          {error.slice(22, -2)}
           <br />
           <input variant="primary" type="submit" value="Login"></input>{" "}
         </Form>

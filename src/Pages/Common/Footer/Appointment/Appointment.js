@@ -5,7 +5,7 @@ const Appointment = () => {
     return (
         <div>
             <h2>Make an Appointment</h2>
-            <div className="line mx-auto mb-3"></div>
+            <div className="line mx-auto mb-3 rounded"></div>
 
             <form action="">
                 <input type="text" placeholder="name"/>

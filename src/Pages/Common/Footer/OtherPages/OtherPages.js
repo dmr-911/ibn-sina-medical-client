@@ -6,7 +6,7 @@ const OtherPages = () => {
     return (
       <div>
         <h2>Extras</h2>
-        <div className="line mb-3 mx-auto"></div>
+        <div className="line rounded mb-3 mx-auto"></div>
         <Nav.Link
           as={HashLink}
           to="/home#home"

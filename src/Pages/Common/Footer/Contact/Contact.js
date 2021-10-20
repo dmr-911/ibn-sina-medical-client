@@ -12,7 +12,7 @@ const Contact = () => {
     return (
       <div>
         <h3>Contact Details</h3>
-        <div className="line mx-auto mb-3"></div>
+        <div className="line mx-auto mb-3 rounded"></div>
         <p>{map} 69 Elephant Road, Dhaka-1201</p>
         <p>{message} mizanur911@ibn-sina.com</p>
         <p>{clock} 8 A.M to 12 P.M Monday to Saturday</p>

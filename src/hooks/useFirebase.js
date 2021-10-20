@@ -24,6 +24,7 @@ const yahooProvider = new OAuthProvider("yahoo.com");
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -89,11 +90,11 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
           .then((result) => {
             setNameAndImage();
-            alert("User has been created");
+            setMessage('New user created, Please Login');
           })
           .catch((err) => {
             setError(err.message);
-            alert(err.message);
+            setMessage('User already exists, Go to login page')
           });
       };
       const getName = (e) => {
@@ -111,7 +112,7 @@ const useFirebase = () => {
         setPhoto(e?.target?.value);
       };
   
-    return { user, error, logOut, googleSignIn, isLoading, setIsLoading, facebookSignIn, githubSignIn, yahooSignIn, signup, getName, getEmail, getPassword, getPhoto, signInWithEmail };
+    return { user, error, logOut, googleSignIn, isLoading, setIsLoading, facebookSignIn, githubSignIn, yahooSignIn, signup, getName, getEmail, getPassword, getPhoto, signInWithEmail, message };
 }
 
 export default useFirebase;

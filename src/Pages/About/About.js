@@ -23,7 +23,7 @@ const About = () => {
         <span className="text-white">About</span>{" "}
         <span className="color-orrange">Hospital</span>
       </h2>
-      <div className="line mx-auto mb-3"></div>
+      <div className="line mx-auto mb-3 rounded"></div>
       <div className="break-line mx-auto mb-3"></div>
       {about.length ? (
         <Row xs={1} md={2} lg={3} className="g-3 mb-5">

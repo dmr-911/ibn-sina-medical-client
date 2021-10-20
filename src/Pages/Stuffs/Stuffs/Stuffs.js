@@ -20,7 +20,7 @@ const Stuffs = () => {
           <span className="text-white">Medical </span>
           <span className="color-orrange">Stuffs</span>
         </h2>
-        <div className="line mx-auto mb-3"></div>
+        <div className="line rounded mx-auto mb-3"></div>
         <Row xs={1} md={3} className="g-3">
           {stuffs.length &&
             stuffs.map((stuff) => <Stuff key={stuff.id} stuff={stuff}></Stuff>)}

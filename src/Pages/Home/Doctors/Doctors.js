@@ -12,7 +12,7 @@ const Doctors = () => {
           <span className="text-white">Doctors</span>
           <span className="color-orrange"> List</span>
         </h2>
-        <div className="line mx-auto mb-3"></div>
+        <div className="line rounded mx-auto mb-3"></div>
         <Row xs={1} md={2} className="g-4">
           {doctors.length &&
             doctors.map((doctor) => (
