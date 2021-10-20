@@ -20,15 +20,18 @@ const NavbarCustom = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0"
+              className="mx-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
               <Nav.Link
                 as={NavLink}
-                to="/home"
                 className="text-white"
-                activeStyle={{ color: "red" }}
+                to="/home"
+                activeStyle={{
+                  fontWeight: "bold",
+                  fontSize: "1.1rem"
+                }}
               >
                 Home
               </Nav.Link>
@@ -36,7 +39,10 @@ const NavbarCustom = () => {
                 as={NavLink}
                 to="/doctors"
                 className="text-white"
-                activeStyle={{ color: "red" }}
+                activeStyle={{
+                  fontWeight: "bold",
+                  fontSize: "1.1rem",
+                }}
               >
                 Doctors
               </Nav.Link>
@@ -44,7 +50,10 @@ const NavbarCustom = () => {
                 as={NavLink}
                 to="/stuffs"
                 className="text-white"
-                activeStyle={{ color: "red" }}
+                activeStyle={{
+                  fontWeight: "bold",
+                  fontSize: "1.1rem",
+                }}
               >
                 Stuffs
               </Nav.Link>
@@ -52,7 +61,10 @@ const NavbarCustom = () => {
                 as={NavLink}
                 to="/services"
                 className="text-white"
-                activeStyle={{ color: "red" }}
+                activeStyle={{
+                  fontWeight: "bold",
+                  fontSize: "1.1rem",
+                }}
               >
                 Services
               </Nav.Link>
@@ -60,7 +72,10 @@ const NavbarCustom = () => {
                 as={NavLink}
                 to="/about"
                 className="text-white"
-                activeStyle={{ color: "red" }}
+                activeStyle={{
+                  fontWeight: "bold",
+                  fontSize: "1.1rem",
+                }}
               >
                 About Us
               </Nav.Link>
@@ -68,7 +83,7 @@ const NavbarCustom = () => {
             {user.email ? (
               <>
                 <span>
-                  <i>{user?.displayName?.toUpperCase() || user.email}</i> 
+                  <i>{user?.displayName?.toUpperCase() || user.email}</i>
                 </span>
                 <button
                   className="btn-logout btn-danger rounded"

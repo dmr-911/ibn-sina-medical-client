@@ -2,11 +2,12 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import img1 from '../../../images/slider/slider-1.png';
 import img3 from '../../../images/slider/slider-3.png';
+import './Slider.css';
 
 const Slider = () => {
     return (
       <Carousel fade>
-        <Carousel.Item>
+        <Carousel.Item id="slider">
           <img className="d-block w-100" src={img1} alt="First slide" />
           <Carousel.Caption>
             <h3>Patient Is Our first Priority</h3>
