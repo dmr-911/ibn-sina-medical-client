@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Col, Row, Container } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
 
 const ServiceDetails = () => {
@@ -23,19 +23,29 @@ const ServiceDetails = () => {
     return (
       <div>
         {service && (
-          <Card
-            className="mx-auto my-5"
-            style={{ width: "18rem", backgroundColor: "#394650", color: "white"}}
-          >
-            <Card.Img variant="top" src={service.picture} />
-            <Card.Body>
-              <Card.Title>{service.name}</Card.Title>
-              <Card.Text>{service.details}</Card.Text>
-              <Button variant="primary" onClick={onHandleBack}>
-                Go Home
-              </Button>
-            </Card.Body>
-          </Card>
+          <Container fluid>
+            <Row xs={1} md={2} className="g-4">
+              <Col className="my-5 mx-auto">
+                <Card
+                  style={{
+                    backgroundColor: "#394650",
+                    color: "white",
+                  }}
+                >
+                  <Card.Img variant="top" src={service.picture} />
+                  <Card.Body>
+                    <Card.Title>{service.name}</Card.Title>
+                    <Card.Text>
+                      This is a longer card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </Card.Text>
+                    <Button onClick={onHandleBack}>Go Home</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
         )}
       </div>
     );

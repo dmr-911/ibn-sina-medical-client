@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
 
 const DoctorDetails = () => {
@@ -24,30 +24,33 @@ const DoctorDetails = () => {
         {doctors.length && (
           <div>
             <h3 className="mt-3">
-              Your appoinment with <span className="color-orrange">Dr. {doctor.name}</span> is processing!
-              Keep Patience, Thank You.
+              Your appoinment with{" "}
+              <span className="color-orrange">Dr. {doctor.name}</span> is
+              processing! Keep Patience, Thank You.
             </h3>
-            <Card
-              className="mx-auto mb-5 mt-2 border border-1 border-primary"
-              style={{
-                width: "35rem",
-                backgroundColor: "#394650",
-                color: "white",
-              }}
-            >
-              <Card.Img variant="top" src={doctor.picture} />
-              <Card.Body>
-                <Card.Title>{doctor.name}</Card.Title>
-                <Card.Text>
-                  Email : {doctor.email}
-                  <br />
-                  Phone : {doctor.phone}
-                </Card.Text>
-                <Button variant="primary" onClick={onHandleBack}>
-                  Go Home
-                </Button>
-              </Card.Body>
-            </Card>
+            <Container fluid>
+              <Row xs={1} md={2} className="g-4">
+                <Col className="my-5 mx-auto">
+                  <Card
+                    style={{
+                      backgroundColor: "#394650",
+                      color: "white",
+                    }}
+                  >
+                    <Card.Img variant="top" src={doctor.picture} />
+                    <Card.Body>
+                      <Card.Title>{doctor.name}</Card.Title>
+                      <Card.Text>
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </Card.Text>
+                      <Button onClick={onHandleBack}>Go Home</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
           </div>
         )}
       </div>
