@@ -6,16 +6,33 @@ import { HashLink } from "react-router-hash-link";
 import './Navbar.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import ibn from '../../../images/logo/ibn-sina-removebg-preview.png';
 
 const login = <FontAwesomeIcon icon={faSignInAlt} />;
 
 const NavbarCustom = () => {
   const { user, logOut } = useAuth();
     return (
-      <Navbar className="custom-nav-bg sticky-top" expand="lg">
+      <Navbar
+        className="custom-nav-bg sticky-top border-bottom border-2 border-info"
+        expand="lg"
+      >
         <Container fluid>
-          <Navbar.Brand as={Link} to="/home" className="text-info fs-3">
-            IBN-Sina Hospital
+          <Navbar.Brand
+            as={Link}
+            to="/home"
+            className="d-flex justify-content-center align-items-center"
+          >
+            <img
+              alt="Logo"
+              src={ibn}
+              width="60"
+              height="60"
+              className="d-inline-block align-top bg-light rounded"
+            />{" "}
+            <span className="fs-3 ps-2 text-white">
+              <i>IBN-Sina Hospital</i>
+            </span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -30,7 +47,7 @@ const NavbarCustom = () => {
                 to="/home"
                 activeStyle={{
                   fontWeight: "bold",
-                  fontSize: "1.1rem"
+                  fontSize: "1.1rem",
                 }}
               >
                 Home
