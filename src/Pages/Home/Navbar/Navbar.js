@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 import './Navbar.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
-import ibn from '../../../images/logo/ibn-sina-removebg-preview.png';
+import ibn from '../../../images/logo/ibn-sina.png';
 
 const login = <FontAwesomeIcon icon={faSignInAlt} />;
 
@@ -28,10 +28,10 @@ const NavbarCustom = () => {
               src={ibn}
               width="60"
               height="60"
-              className="d-inline-block align-top bg-light rounded"
+              className="d-inline-block align-top rounded"
             />{" "}
-            <span className="fs-3 ps-2 text-white">
-              <i>IBN-Sina Hospital</i>
+            <span className="ps-2 text-white">
+              <i>IBN-Sina</i>
             </span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
